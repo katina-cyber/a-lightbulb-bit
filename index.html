@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<style>
+body {
+    background-color: black;
+    color: white;
+}
+.content {
+  max-width: 850px;
+  margin: 0 auto;
+  margin-top: 5%;
+  text-align: center;
+}
+
+svg{
+    height: 400px;
+    width: 400px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+</style>
+
+<script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        currentState = $("#state").html()
+        if (currentState == "ON")
+        {
+            $("#state").html("OFF")
+            $("svg").css("color", "black");
+        }
+        else {
+            $("#state").html("ON");
+            $("svg").css("color", "yellow");
+        }
+      });
+    });
+    </script>
+</head>
+<body>
+
+<div class="content">
+<h1>A bit</h1>
+<p>A "bit" in terms of Computer Science is simply something that can have one of two states. In your computer, a bit can have the value of either a "1" or a "0", but we can look at other examples of what would fit the definition of a bit. Another example of a bit would be a light, which can be either "on" or "off".</p>
+<p>If you have ever flicked a light switch in your home, or turned a lamp on or off, then you have seen an example of a bit in action! Using lots of these "bits" we can lay the foundation for our computers so we can do cool stuff with them! To see this bit in action, go ahead and click the "change state" button at the bottom of this page to turn this light on or off.</p>
+<h1 id="state">OFF</h1>
+    <?xml version="1.0" encoding="UTF-8"?>
+<svg class="feather feather-sun" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <g stroke-width=".94353">
+  <circle cx="12.184" cy="9.7553" r="2.3588"/>
+  <line x1="12.184" x2="12.184" y1="4.5659" y2="5.5094"/>
+  <line x1="12.184" x2="12.184" y1="14.001" y2="14.945"/>
+  <line x1="8.5132" x2="9.1831" y1="6.085" y2="6.7549"/>
+  <line x1="15.184" x2="15.854" y1="12.756" y2="13.426"/>
+  <line x1="6.9941" x2="7.9376" y1="9.7553" y2="9.7553"/>
+  <line x1="16.429" x2="17.373" y1="9.7553" y2="9.7553"/>
+  <line x1="8.5132" x2="9.1831" y1="13.426" y2="12.756"/>
+  <line x1="15.184" x2="15.854" y1="6.7549" y2="6.085"/>
+ </g>
+</svg>
+
+<button type="button" class="btn btn-success">CHANGE STATE!</button>
+
+</div>
+
+</body>
+</html>
